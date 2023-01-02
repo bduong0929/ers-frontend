@@ -1,9 +1,11 @@
-<!-- #loginForm is the form variable-->
+<!-- #loginForm is the form variable name -->
 <!-- #loginForm is of type ngForm -->
 <!-- pass loginForm into the function onSubmit as a parameter -->
 <form class="flex flex-col items-center" (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
     <div class="flex flex-col items-center | gap-10 p-10 mt-40 | rounded-xl shadow-xl">
         <h1 class="font-bold text-7xl font-serif">Login</h1>
+        <!-- ngModel binds the input values into the form as an attribute -->
+        <!-- needs the name="" or result will be undefined -->
         <input class="bg-slate-100 | px-5 py-2 | shadow-xl rounded-lg | ease-out duration-300 focus:scale-110" type="text" placeholder="Username" name="username" ngModel>
         <input class="bg-slate-100 | px-5 py-2 | shadow-xl rounded-lg | ease-out duration-300 focus:scale-110" type="password" placeholder="Password" name="password" ngModel>
         <button class="bg-black | text-white | px-5 py-2 | shadow-xl rounded-lg | ease-out duration-500 hover:scale-125">Sign in</button>
